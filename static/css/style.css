@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Netflix';
+    src: url('../../fonts/AvenirNextLTPro-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Netflix';
+    src: url('../../fonts/AvenirNextLTPro-Bold.otf');
+    font-weight: 700;
+    font-style: bold;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Netflix;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.header {
+    padding: 15px 15px 100px;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, black 0%, black 50%, rgba(0, 0, 0, 0.5) 85%, transparent 100%);
+}
+
+.navigation {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.navigation-item {
+    list-style: none;
+    text-align: center;
+}
+
+.featured {
+    margin-top: -80px;
+    position: relative;
+}
+
+.featured-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, black 0, black 40%, transparent 100%);
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+.tag {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.tag:before {
+    content: '●';
+    margin-right: 10px;
+}
+
+.tag:first-child::before {
+    display: none;
+}
+
+.featured-actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.button {
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 1em 5px .5em;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.button::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.button-secondary {
+    min-width: 100px;
+    font-size: 1.1em;
+    background: none;
+    display: block;
+    color: white;
+}
+
+.button-secondary::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.icon-plus::before {
+    background: url(../../images/icons/plus.svg);
+}
+
+.icon-play::before {
+    background: url(../../images/icons/play.svg);
+}
+
+.icon-info::before {
+    background: url(../../images/icons/info.svg);
+}
+
+.credits {
+    font-family: system-ui;
+    background: #212429;
+    font-size: 11px;
+    color: white;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .credits a {
+    color: red;
+    text-decoration: none;
+}
